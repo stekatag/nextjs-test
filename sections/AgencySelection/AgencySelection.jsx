@@ -3,7 +3,7 @@ import { AgencyHeader } from "../../components/AgencyHeader/AgencyHeader";
 import { StyledAgencySelection } from "./elements";
 
 const agencyImageProps = {
-  image: { src: "/img/video.png", alt: "", width: 658, height: 1050 },
+  image: { src: "/img/video.png", alt: "", width: 500, height: 798 },
 };
 
 export const AgencySelection = () => {

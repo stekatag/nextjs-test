@@ -1,9 +1,18 @@
 // The Card to be exported goes here
-export const Card = ({ title, description }) => {
+import Image from "next/image";
+import { StyledSectionParagraph } from "../../components/Typography/elements";
+import { CardWrapper, CardIconWrapper, CardInfo, CardTitle } from "./elements";
+
+export const Card = ({ title, description, icon, href }) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <p>{description}</p>
-    </div>
+    <CardWrapper href={href} target="_blank">
+      <CardIconWrapper>
+        <Image src={icon} alt={title} width={100} height={100} />
+      </CardIconWrapper>
+      <CardInfo>
+        <CardTitle>{title}</CardTitle>
+        <StyledSectionParagraph>{description}</StyledSectionParagraph>
+      </CardInfo>
+    </CardWrapper>
   );
 };
