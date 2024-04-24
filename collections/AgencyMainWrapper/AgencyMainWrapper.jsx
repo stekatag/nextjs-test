@@ -1,5 +1,6 @@
 import {
   StyledAgencyImageWrapper,
+  StyledAgencyImageInnerWrapper,
   StyledAgencyMainContainer,
   StyledAgencyMain,
 } from "./elements";
@@ -38,13 +39,15 @@ export const AgencyMainWrapper = ({ image }) => {
     <StyledAgencyMainContainer>
       <StyledAgencyMain>
         <StyledAgencyImageWrapper>
-          <Image
-            layout="responsive"
-            src={image.src}
-            alt={image.alt}
-            width={image.width}
-            height={image.height}
-          />
+          <StyledAgencyImageInnerWrapper>
+            <Image
+              layout="responsive"
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+            />
+          </StyledAgencyImageInnerWrapper>
         </StyledAgencyImageWrapper>
         <AgencyCardsWrapper agencyCards={agencyCards} />
       </StyledAgencyMain>
