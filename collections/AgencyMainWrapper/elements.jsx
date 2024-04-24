@@ -11,6 +11,12 @@ export const StyledAgencyMain = styled(SectionContainer)`
   max-width: 62.5rem;
   margin: 0 auto;
   padding: 4.8rem 2.4rem;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    padding: 3.6rem 2.4rem;
+    gap: 3.6rem;
+  }
 `;
 
 export const StyledAgencyImageWrapper = styled.div`
@@ -18,4 +24,8 @@ export const StyledAgencyImageWrapper = styled.div`
   width: 100%;
   height: 100%;
   margin-right: auto;
+
+  @media screen and (max-width: 1024px) {
+    margin: 0 auto;
+  }
 `;

@@ -1,6 +1,5 @@
 // Styled elements for the Card go here
 import styled from "styled-components";
-import Link from "next/link";
 import { StyledSectionSubheading } from "../../components/Typography/elements";
 
 export const CardTitle = styled(StyledSectionSubheading)`
@@ -32,6 +31,10 @@ export const CardWrapper = styled.a`
 
 export const CardIconWrapper = styled.div`
   padding: 3rem;
+
+  @media screen and (max-width: 1024px) {
+    padding: 2rem;
+  }
 `;
 
 export const CardInfo = styled.div`
