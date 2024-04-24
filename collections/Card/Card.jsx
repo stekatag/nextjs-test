@@ -29,7 +29,7 @@ export const Card = ({ title, description, icon, href }) => {
   return (
     <CardWrapper href={href} target="_blank">
       <CardIconWrapper>
-        <Image src={icon} alt={title} width={100} height={100} />
+        <Image src={icon} alt={title} width={50} height={50} />
       </CardIconWrapper>
       <CardInfo>
         <CardTitle>{title}</CardTitle>
