@@ -1,16 +1,49 @@
-import { AgencyMainWrapper } from "../../collections/AgencyMainWrapper/AgencyMainWrapper";
-import { AgencyHeader } from "../../components/AgencyHeader/AgencyHeader";
-import { StyledAgencySelection } from "./elements";
+import {
+  StyledAgencySelection,
+  StyledAgencyHeaderWrapper,
+  StyledAgencySubheading,
+  StyledAgencyImageWrapper,
+  StyledAgencyImageInnerWrapper,
+  StyledAgencyMainContainer,
+  StyledAgencyMain,
+  StyledAgencyCardsWrapper,
+} from "./elements";
+import { StyledSectionHeading } from "../../components/Typography/elements";
+import { Card } from "../../collections/Card/Card";
+import Image from "next/image";
 
-const agencyImageProps = {
-  image: { src: "/img/video.png", alt: "", width: 500, height: 798 },
-};
-
-export const AgencySelection = () => {
+export const AgencySelection = ({ image, agencyCards }) => {
   return (
     <StyledAgencySelection>
-      <AgencyHeader />
-      <AgencyMainWrapper {...agencyImageProps} />
+      {/* header with heading and subheading */}
+      <StyledAgencyHeaderWrapper>
+        <StyledSectionHeading>Managed agency selection</StyledSectionHeading>
+        <StyledAgencySubheading>
+          Strenghten your onboarding process
+        </StyledAgencySubheading>
+      </StyledAgencyHeaderWrapper>
+      {/* main content */}
+      <StyledAgencyMainContainer>
+        <StyledAgencyMain>
+          <StyledAgencyImageWrapper>
+            <StyledAgencyImageInnerWrapper>
+              <Image
+                layout="responsive"
+                src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+              />
+            </StyledAgencyImageInnerWrapper>
+          </StyledAgencyImageWrapper>
+          {/* agency cards */}
+          <StyledAgencyCardsWrapper>
+            {agencyCards.map((card, index) => (
+              <Card key={index} {...card} />
+            ))}
+          </StyledAgencyCardsWrapper>
+        </StyledAgencyMain>
+      </StyledAgencyMainContainer>
     </StyledAgencySelection>
   );
 };

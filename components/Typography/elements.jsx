@@ -58,9 +58,8 @@ export const StyledSectionParagraph = styled((props) => <p {...props} />)`
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
-`;
 
-export const StyledBoldText = styled((props) => <strong {...props} />)`
-  font-weight: 600;
-  font-size: inherit;
+  strong {
+    font-weight: 600;
+  }
 `;
