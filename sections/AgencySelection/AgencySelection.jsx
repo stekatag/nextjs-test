@@ -38,8 +38,15 @@ export const AgencySelection = ({ image, agencyCards }) => {
           </StyledAgencyImageWrapper>
           {/* agency cards */}
           <StyledAgencyCardsWrapper>
-            {agencyCards.map((card, index) => (
-              <Card key={index} {...card} />
+            {agencyCards.map((card) => (
+              <Card
+                key={card.id}
+                title={card.title}
+                icon={card.icon}
+                href={card.href}
+              >
+                {card.description}
+              </Card>
             ))}
           </StyledAgencyCardsWrapper>
         </StyledAgencyMain>

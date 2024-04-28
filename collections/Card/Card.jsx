@@ -3,7 +3,7 @@ import Image from "next/image";
 import { StyledSectionParagraph } from "../../components/Typography/elements";
 import { CardWrapper, CardIconWrapper, CardInfo, CardTitle } from "./elements";
 
-export const Card = ({ title, description, icon, href }) => {
+export const Card = ({ title, icon, href, children }) => {
   return (
     <CardWrapper href={href} target="_blank">
       <CardIconWrapper>
@@ -11,7 +11,7 @@ export const Card = ({ title, description, icon, href }) => {
       </CardIconWrapper>
       <CardInfo>
         <CardTitle>{title}</CardTitle>
-        <StyledSectionParagraph>{description}</StyledSectionParagraph>
+        <StyledSectionParagraph>{children}</StyledSectionParagraph>
       </CardInfo>
     </CardWrapper>
   );
