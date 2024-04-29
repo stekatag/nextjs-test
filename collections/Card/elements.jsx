@@ -10,7 +10,6 @@ export const CardTitle = styled(StyledSectionSubheading)`
 `;
 
 export const CardWrapper = styled.a`
-  display: block;
   border: 3px solid transparent;
   color: unset;
   text-decoration: none;
@@ -18,6 +17,15 @@ export const CardWrapper = styled.a`
   border-radius: 10px;
   display: flex;
   transition: border 150ms;
+  width: 90%;
+
+  &:nth-child(2) {
+    width: 95%;
+  }
+
+  &:last-child {
+    width: 100%;
+  }
 
   &:hover,
   &:active,
@@ -32,7 +40,7 @@ export const CardWrapper = styled.a`
 `;
 
 export const CardIconWrapper = styled.div`
-  padding: 3rem;
+  padding: 2.5rem;
 
   @media screen and (max-width: 1024px) {
     padding: 2rem;
