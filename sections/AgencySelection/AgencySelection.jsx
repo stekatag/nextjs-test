@@ -44,9 +44,8 @@ export const AgencySelection = ({ image, agencyCards }) => {
                 title={card.title}
                 icon={card.icon}
                 href={card.href}
-              >
-                {card.description}
-              </Card>
+                description={card.description}
+              ></Card>
             ))}
           </StyledAgencyCardsWrapper>
         </StyledAgencyMain>

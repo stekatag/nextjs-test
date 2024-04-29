@@ -19,7 +19,9 @@ export const CardWrapper = styled.a`
   display: flex;
   transition: border 150ms;
 
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     border: 3px solid ${({ theme }) => theme.main};
 
     ${CardTitle} {
